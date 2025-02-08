@@ -1,42 +1,107 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+body {
+  background-color: #212121;
+  color: #d4e3e4;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+.to-do-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-width: 500px;
+  
+}
+
+.tittle {
+  margin-bottom: .5rem;
+}
+
+.task-input {
+  margin-bottom: 1.5rem;
+  display: flex;
+  width: 100%;
+  
+  gap: .25rem;
+
+
+
+  .task-input-field {
+    font-family: Arial, Helvetica, sans-serif;
+    border: 0;
+    background-color: #464242;
+    color: #d4e3e4;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 1rem;
+    padding-left: 1rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  .task-input-field:focus {
+    border: 0;
+    outline: 0;
+  }
+
+  .task-input-btn {
+    border-radius: 5px;
+    border: 0;
+    text-align: center;
+    width: 70px;
+    padding: .75rem 1rem;
+    background-color: #425145;
+    color: #d4e3e4;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+.tasks {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+
+.task {
+  display: flex;
+  /* gap: 1rem; */
+  align-items: center;
+  width: 100%;
+  padding-left: 1rem;
+  justify-content: space-between;
+
+  .task-btn-wrapper {
+    display: flex;
+    gap: .25rem;
   }
-}
 
-.card {
-  padding: 2em;
-}
+  .task-pagination-btn {
+    border: 0;
+    border-radius: 5px;
+    padding: .75rem 1rem;
+    background-color: #464242;
+    color: #d4e3e4;
+    text-align: center;
+  }
 
-.read-the-docs {
-  color: #888;
+  .task-delete-btn {
+    border: 0;
+    border-radius: 5px;
+    padding: 0.75rem 1rem;
+    background-color: #493030;
+    color: #d4e3e4;
+  }
 }
